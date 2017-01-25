@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mastermind</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="main.css">
+    <link rel='stylesheet' href='http://bgrins.github.io/spectrum/spectrum.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+    <script type="x-mustache-template" id="color-template">
+        <div class="row-{{ number }}" id="rowId">
+            <div class="colors_div">
+                <div class="palettes">
+                    <input class="showPaletteOnly" id="firstChoice" type="color">
+                    <input class="showPaletteOnly" id="secondChoice" type="color">
+                    <input class="showPaletteOnly" id="thirdChoice" type="color">
+                    <input class="showPaletteOnly" id="fourthChoice" type="color">
+                </div>
+            </div>
+
+        <section id="score">
+            <div class="answers">
+                <div class="score"> {{score}}</div>
+                <div class="score">{{score}} </div>
+                <div class="score"> {{score}}</div>
+                <div class="score"> {{score}}</div>
+            </div>
+        </section>
+        </div>
+    </script>
+</head>
+
+<body>
+    <h1 id="title">Mastermind</h1>
+    <button id="start-over" name="button">Start Over</button>
+    <button id="guess-button" name="button">Guess</button>
+
+    <section id="game_section">
+        <section id="play">
+            <ul id='rowList'></ul>
+        </section>
+
+
+
+
+
+        <!-- // adding backbone -->
+        <script src="http://underscorejs.org/underscore.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="http://backbonejs.org/backbone.js"></script>
+        <!-- adding spectrum -->
+        <script src='http://bgrins.github.io/spectrum/spectrum.js'></script>
+        <!-- add js file -->
+        <script src="app.js" type="text/javascript">
+        </script>
+</body>
+</html>
